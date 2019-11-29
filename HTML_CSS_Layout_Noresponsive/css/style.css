@@ -15,6 +15,7 @@ body {
     margin: 0 auto;
     background: white;
     font-family: 'Raleway', sans-serif;
+    box-shadow: 0 3px 6px var(--shadow-color);
 }
 
 .container {
@@ -63,11 +64,51 @@ header li a {
     color: var(--shadow-color);
 }
 
+/*
+** BANNER
+*/
 
+.banner {
+    background: url("../images/Background/Background.png") no-repeat bottom;
+}
 
+.banner .container {
+    height: 704px;
+    margin-top: calc(208px - 70px);
+    text-align: center;
+}
 
+.banner h1 {
+    font-size: 49px;
+    font-weight: initial;
+    margin-bottom: 20px;
+}
 
+.banner p {
+    font-family: var(--additional-font);
+    font-size: 16px;
+    font-weight: initial;
+    margin-bottom: 38px;
+}
 
+.banner a {
+    height: 67px;
+    width: 440px;
+    padding: 24px 0;
+    font-family: var(--additional-font);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+    background: var(--main-color);
+    border-radius: 40px;
+    box-shadow: 5px 10px 14px rgba(8, 166, 228, .2);
+}
+
+/*
+** STATISTICS
+*/
 
 
 
