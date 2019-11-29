@@ -64,6 +64,10 @@ header li a {
     color: var(--shadow-color);
 }
 
+h1, h2 {
+    font-weight: initial;
+}
+
 /*
 ** BANNER
 */
@@ -80,7 +84,6 @@ header li a {
 
 .banner h1 {
     font-size: 49px;
-    font-weight: initial;
     margin-bottom: 20px;
 }
 
@@ -110,19 +113,81 @@ header li a {
 ** STATISTICS
 */
 
+.statistics {
+    height: 531px;
+    text-align: center;
+}
 
+.statistics h2 {
+    font-size: 36px;
+    margin: 106px 0 101px 0;
+}
 
+.statistic_input {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.statistic_input_numbers {
+    height: 168px;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
 
+.statistic_input .circle {
+    height: 63px;
+    width: 63px;
+    background: var(--side-color-pink);
+    border-radius: 50%;
+}
 
+.statistic_input h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
 
+.statistic_input p {
+    display: block;
+}
 
+/*
+** MAIN
+*/
 
+main {
+    background: #F7F7F7;
+    height: 1395px;
+    padding: 105px;
+}
 
+article {
+    background: white;
+    height: 370px;
+    display: flex;
+    align-items: center;
+}
 
+article:nth-of-type(2) {
+    margin: 37.5px 0;
+}
 
+.article_text img {
+    display: block;
+}
 
+.article_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
+article .text h2 {
+    font-size: 36px;
+}
 
 
 
