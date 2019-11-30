@@ -120,7 +120,7 @@ h1, h2 {
 
 .statistics h2 {
     font-size: 36px;
-    margin: 106px 0 101px 0;
+    padding: 106px 0 101px 0;
 }
 
 .statistic_input {
@@ -129,29 +129,65 @@ h1, h2 {
 }
 
 .statistic_input_numbers {
-    height: 168px;
+    height: 150px;
     width: 176px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid black;
+    justify-content: space-between;
+    position: relative;
 }
 
 .statistic_input .circle {
     height: 63px;
     width: 63px;
-    background: var(--side-color-pink);
     border-radius: 50%;
+}
+
+.statistic_input_numbers:first-of-type::before {
+    content: url("../images/Minis/Person.svg");
+    display: block;
+    position: absolute;
+    right: 40px;
+}
+
+.statistic_input_numbers:nth-of-type(2)::before {
+    content: url("../images/Minis/Eye.svg");
+    display: block;
+    position: absolute;
+    right: 34px;
+    top: 14px;
+}
+
+.statistic_input_numbers:last-of-type::before {
+    content: url("../images/Minis/Catalog.svg");
+    display: block;
+    position: absolute;
+    right: 38px;
+    top: 5px;
+}
+
+.statistic_input_numbers:first-of-type div {
+    background: var(--side-color-pink);
+}
+
+.statistic_input_numbers:nth-of-type(2) div {
+    background: var(--main-color);
+}
+
+.statistic_input_numbers:last-of-type div {
+    background: var(--side-color-green);
 }
 
 .statistic_input h3 {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
+    letter-spacing: 6px;
 }
 
 .statistic_input p {
     display: block;
+    color: #A5A5A5;
 }
 
 /*
@@ -161,12 +197,20 @@ h1, h2 {
 main {
     background: #F7F7F7;
     height: 1395px;
-    padding: 105px;
+}
+
+main .container {
+    height: 1395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 article {
     background: white;
     height: 370px;
+    width: 1124px;
     display: flex;
     align-items: center;
 }
@@ -188,6 +232,156 @@ article:nth-of-type(2) {
 article .text h2 {
     font-size: 36px;
 }
+
+/*
+** PRICING
+*/
+
+.pricing {
+    padding-top: 106px;
+}
+
+.pricing .container {
+    height: 610px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 71px;
+}
+
+.pricing_boxes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pricing_box {
+    width: 372px;
+    height: 461px;
+    border: 1px solid black;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.pricing_box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 25px;
+}
+
+.price {
+    font-family: var(--additional-font);
+    font-weight: 300;
+    font-size: 46px;
+}
+
+.pricing_box .limited_offer {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pricing_box ul {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.pricing_box li {
+    font-family: var(--additional-font);
+    font-size: 14px;
+    list-style: none;
+}
+
+.pricing_box .button {
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    bottom: -22px;
+    left: 110px;
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing_box a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.pricing_box:first-of-type {
+    border-color: var(--side-color-pink);
+}
+
+.pricing_box:first-of-type .price {
+    color: var(--side-color-pink);
+}
+
+.pricing_box:first-of-type .button {
+    background: var(--side-color-pink);
+}
+
+.pricing_box:nth-of-type(2) {
+    border-color: var(--main-color);
+}
+
+.pricing_box:nth-of-type(2) .price {
+    color: var(--main-color);
+}
+
+.pricing_box:nth-of-type(2) .button {
+    background: var(--main-color);
+}
+
+.pricing_box:last-of-type {
+    border-color: var(--side-color-green);
+}
+
+.pricing_box:last-of-type .price {
+    color: var(--side-color-green);
+}
+
+.pricing_box:last-of-type .button {
+    background: var(--side-color-green);
+}
+
+.pricing_box li::before {
+    content: url("../images/Minis/Checkmark.svg");
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    border: 1px solid var(--side-color-green);
+    border-radius: 2px;
+    margin-right: 13px;
+}
+
+.pricing_box:first-of-type ul li:nth-of-type(4)::before,
+.pricing_box:first-of-type ul li:nth-of-type(5)::before,
+.pricing_box:nth-of-type(2) ul li:last-of-type::before
+{
+    content: "X";
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    color: var(--side-color-pink);
+    border: 1px solid var(--side-color-pink);
+    border-radius: 2px;
+}
+
+/*
+** FORM
+*/
+
+
+
+
 
 
 
