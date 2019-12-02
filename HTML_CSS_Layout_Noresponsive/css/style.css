@@ -367,17 +367,94 @@ article .text h2 {
 .pricing_box:nth-of-type(2) ul li:last-of-type::before
 {
     content: "X";
+    font-size: 8px;
+    font-weight: bold;
     display: inline-block;
     height: 11px;
     width: 11px;
     color: var(--side-color-pink);
     border: 1px solid var(--side-color-pink);
     border-radius: 2px;
+
 }
 
 /*
 ** FORM
 */
+
+.form .container {
+    width: 896px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form h2 {
+    font-size: 49px;
+    padding-bottom: 22px;
+}
+
+.form p {
+    font-family: var(--additional-font);
+    font-size: 16px;
+    font-weight: initial;
+    padding-bottom: 42px;
+    display: inline-block;
+}
+
+.form .form_contact {
+    color: #A5A5A5;
+
+}
+
+.form .mail::before {
+    content: url("../images/Minis/Mail Icon.svg");
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.form .phone::before {
+    content: url("../images/Minis/Phone Icon.svg");
+    display: inline-block;
+    padding: 0 10px 0 24px;
+}
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 157px;
+    width: 440px;
+}
+
+.form_input label {
+    font-family: var(--additional-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-size: 11px;
+    letter-spacing: 3px;
+    display: block;
+}
+
+.form_input input {
+    border: none;
+    border-bottom: 1px solid rgba(165, 165, 165, .7);
+    width: 440px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
