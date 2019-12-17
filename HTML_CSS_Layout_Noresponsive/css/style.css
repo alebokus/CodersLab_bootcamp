@@ -207,30 +207,127 @@ main .container {
     align-items: center;
 }
 
-article {
+.article_text {
     background: white;
     height: 370px;
     width: 1124px;
     display: flex;
     align-items: center;
-}
-
-article:nth-of-type(2) {
-    margin: 37.5px 0;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 .article_text img {
     display: block;
 }
 
-.article_text {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.article_text .text h2 {
+    font-size: 36px;
+    padding-bottom: 30px;
 }
 
-article .text h2 {
-    font-size: 36px;
+.article_text .text p {
+    line-height: 22px;
+}
+
+.article_text:nth-of-type(1) .text {
+    width: 416px;
+    height: 182px;
+    position: relative;
+}
+
+.article_text:nth-of-type(1) .text::after {
+    content: "";
+    display: block;
+    width: 310px;
+    height: 1px;
+    border: 1px solid var(--side-color-pink);
+    position: absolute;
+    top: 180px;
+}
+
+.article_text:nth-of-type(1) img {
+    padding-top: 80px;
+    z-index: 2;
+}
+
+.article_text:nth-of-type(1)::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: var(--side-color-pink);
+    border-radius: 35px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 80px;
+    right: 100px;
+}
+
+.article_text:nth-of-type(2) {
+    margin: 37.5px 0;
+}
+
+.article_text:nth-of-type(2) .text {
+    width: 416px;
+    height: 224px;
+    position: relative;
+}
+
+.article_text:nth-of-type(2) .text::after {
+    content: "";
+    display: block;
+    width: 310px;
+    height: 1px;
+    border: 1px solid var(--main-color);
+    position: absolute;
+    top: 220px;
+}
+
+.article_text:nth-of-type(2) img {
+    padding-top: 20px;
+    z-index: 2;
+}
+
+.article_text:nth-of-type(2)::after {
+    content: "";
+    display: block;
+    width: 310px;
+    height: 310px;
+    background: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 20px;
+    left: 90px;
+}
+
+.article_text:nth-of-type(3) .text {
+    width: 554px;
+    height: 224px;
+}
+
+.article_text:nth-of-type(3) .text::after {
+    content: "";
+    display: block;
+    width: 310px;
+    height: 1px;
+    border: 1px solid var(--side-color-green);
+    position: absolute;
+    top: 280px;
+}
+
+.notifications {
+    width: 440px;
+    height: 370px;
+    background: var(--side-color-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifications::after {
+    content: url("../images/Trumpet/Trumpet.png");
 }
 
 /*
